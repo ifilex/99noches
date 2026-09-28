@@ -1,0 +1,6 @@
+{
+  "name": "99 Noches en el Bosque 8-Bit",
+  "description": "Juego de supervivencia retro 8-bit estilo NES inspirado en 99 Nights in the Forest con ciclos de día y noche, generación procedural, crafteo, voces en español, guardado en la nube y controles táctiles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

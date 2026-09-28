@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .pixelated {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+  .crt-scanlines {
+    position: relative;
+  }
+  .crt-scanlines::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%);
+    background-size: 100% 4px;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .crt-scanlines::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 11;
+    pointer-events: none;
+  }
+  .nes-border {
+    border: 4px solid #fce000;
+    box-shadow: inset -4px -4px 0px 0px #885818, inset 4px 4px 0px 0px #ffffff;
+  }
+  .nes-box {
+    background-color: #000000;
+    border: 4px solid #ffffff;
+    box-shadow: inset -2px -2px 0px 0px #585858, inset 2px 2px 0px 0px #a4a4a4;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+  user-select: none;
+  touch-action: none;
+  font-family: 'Press Start 2P', monospace, ui-monospace, monospace;
+}
+
+* {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
